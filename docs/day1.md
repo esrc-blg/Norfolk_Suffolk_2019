@@ -13,6 +13,14 @@ Key Components of SQL server
 4. SQL Server Integration Services (SSIS): SSIS is a component of SQL Server that does the Extract, Transform, and Load (ETL) process that cleans up and formats raw data from source systems for inclusion in the database as ready-to-use information.
 
 
+SQL consists of three components:
+
+1. Data Definition Language (DDL)
+2. Data Manipulation Language (DML)
+3. Data Control Language (DCL)
+
+
+
 [Hello world demo!](https://github.com/ffliza/training/blob/master/Activity-1-1.ipynb)
 
 
