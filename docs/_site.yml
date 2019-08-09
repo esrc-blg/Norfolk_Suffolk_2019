@@ -1,5 +1,4 @@
 name: "ESRC BLG Training 2019"
-output_dir: "."
 navbar:
   title: "ESRC BLG Training 2019"
   left:
@@ -8,9 +7,4 @@ navbar:
     - text: "Day 1"
       menu:
         - text: "Introduction to SQL"
-          href: ./day1.md     
-      
-output:
-  html_document:
-    theme: sandstone
-    highlight: textmate
+          href: ./day1.md    
