@@ -1,4 +1,6 @@
 theme: jekyll-theme-slate
+title: [Introduction to SQL]
+description: [This page contains the material covered in a training session.]
 plugins:
   - jekyll-relative-links
 relative_links:
