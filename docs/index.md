@@ -10,6 +10,8 @@
 5. DML statements
 6. DDL statements
 
+[Day 1](https://github.com/esrc-blg/Norfolk_Suffolk_2019/blob/master/docs/day1.md)
+
 
 ## Day 2
 
