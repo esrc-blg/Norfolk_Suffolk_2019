@@ -1,7 +1,4 @@
-## Hi this is a test.
-
-%https://support.codebasehq.com/articles/tips-tricks/syntax-highlighting-in-markdown
-!https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+# Session 1
 
 ```csharp
 private void index(){
