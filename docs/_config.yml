@@ -16,3 +16,12 @@ include:
   - CONTRIBUTING.md
   - ISSUE_TEMPLATE.md
   - PULL_REQUEST_TEMPLATE.md
+
+navbar:
+  left:
+    - text: "Home"
+      href: index.md
+    - text: "Day 1"
+      menu:
+        - text: "SQL"
+          href: day1.md
