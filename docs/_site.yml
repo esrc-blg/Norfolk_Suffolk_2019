@@ -8,11 +8,7 @@ navbar:
     - text: "Day 1"
       menu:
         - text: "Introduction to SQL"
-          href: day1.md
-      
-      
-      
-      
+          href: ./day1.md     
       
 output:
   html_document:
