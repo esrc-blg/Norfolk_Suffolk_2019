@@ -21,3 +21,6 @@
 4. Using set operators to combine query results
 5. Creating/implementing stored procedures
 6. Adding programming constructs such as variables, conditions, and loops to T-SQL code
+
+
+[Day 2 materials](./day2.md)
