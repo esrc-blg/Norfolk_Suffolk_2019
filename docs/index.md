@@ -10,7 +10,7 @@
 5. DML statements
 6. DDL statements
 
-[Day 1 materials](https://github.com/esrc-blg/Norfolk_Suffolk_2019/blob/master/docs/day1.md)
+[Day 1 materials](./day1.md)
 
 
 ## Day 2
