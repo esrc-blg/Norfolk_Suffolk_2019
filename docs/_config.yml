@@ -18,6 +18,7 @@ include:
   - PULL_REQUEST_TEMPLATE.md
 
 navbar:
+  title: "ESRC BLG Training 2019"
   left:
     - text: "Home"
       href: index.md
