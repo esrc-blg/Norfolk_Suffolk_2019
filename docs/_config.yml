@@ -17,12 +17,3 @@ include:
   - ISSUE_TEMPLATE.md
   - PULL_REQUEST_TEMPLATE.md
 
-navbar:
-  title: "ESRC BLG Training 2019"
-  left:
-    - text: "Home"
-      href: index.md
-    - text: "Day 1"
-      menu:
-        - text: "Introduction to SQL"
-          href: day1.md
