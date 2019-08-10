@@ -19,7 +19,7 @@
 2. Data Manipulation Language (DML)
 3. Data Control Language (DCL)
 
-##### Data Definition Language (DDL) 
+#### Data Definition Language (DDL) 
 This component of the SQL language is used to create and modify tables and other objects in the database. For tables there are three main commands:
 
 CREATE TABLE tablename to create a table in the database 
@@ -28,7 +28,7 @@ DROP TABLE tablename to remove a table from the database
 
 ALTER TABLE tablename to add or remove columns from a table in the database
 
-##### Data Manipulation Language (DML) 
+#### Data Manipulation Language (DML) 
 This component of the SQL language is used to manipulate data within a table. There are four main commands:
 
 SELECT to select rows of data from a table
@@ -39,7 +39,7 @@ UPDATE to change rows of data in a table
 
 DELETE to remove rows of data from a table
 
-##### The Data Control Language (DCL) 
+#### The Data Control Language (DCL) 
 This component of the SQL language is used to create privileges to allow users access to, and manipulation of, the database. There are two main commands:
 
 GRANT to grant a privilege to a user
