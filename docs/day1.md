@@ -2,7 +2,7 @@
 
 ## Session 1
 
-Key Components of SQL server
+### Key Components of SQL server
 
 1. Database Engine: This part of SQL Server actually creates and drives relational databases.
 
@@ -12,8 +12,12 @@ Key Components of SQL server
 
 4. SQL Server Integration Services (SSIS): SSIS is a component of SQL Server that does the Extract, Transform, and Load (ETL) process that cleans up and formats raw data from source systems for inclusion in the database as ready-to-use information.
 
+[How to get help? Check the documentation on Create database.](https://dev.mysql.com/doc/refman/8.0/en/create-database.html)
 
-SQL consists of three components:
+## Demo
+[Create a database]
+
+### SQL consists of three components:
 
 1. Data Definition Language (DDL)
 2. Data Manipulation Language (DML)
@@ -23,8 +27,6 @@ SQL consists of three components:
 This component of the SQL language is used to create and modify tables and other objects in the database. For tables there are three main commands:
 
 CREATE TABLE tablename to create a table in the database 
-
-[How to get help? Check the documentation on Create database.](https://dev.mysql.com/doc/refman/8.0/en/create-database.html)
 
 DROP TABLE tablename to remove a table from the database
 
