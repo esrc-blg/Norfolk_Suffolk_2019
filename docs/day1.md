@@ -14,7 +14,9 @@
 
 [How to get help? Check the documentation on Create database.](https://dev.mysql.com/doc/refman/8.0/en/create-database.html)
 
-## Demo
+
+#### Demo
+[Hello world demo!](https://github.com/ffliza/training/blob/master/Activity-1-1.ipynb)
 [Create a database]
 
 ### SQL consists of three components:
@@ -50,12 +52,9 @@ GRANT to grant a privilege to a user
 
 REVOKE to revoke (remove) a privilege from a user
 
+## Session 2
 
-## Demo
-
-[Hello world demo!](https://github.com/ffliza/training/blob/master/Activity-1-1.ipynb)
-
-### Data Manipulation Language --- SELECT statement
+### Data Manipulation Language --- single table SELECT statements
 ```sql
 select * from Table_A;
 ```
