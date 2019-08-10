@@ -24,6 +24,8 @@ This component of the SQL language is used to create and modify tables and other
 
 CREATE TABLE tablename to create a table in the database 
 
+[Documentation on Create database!](https://dev.mysql.com/doc/refman/8.0/en/create-database.html)
+
 DROP TABLE tablename to remove a table from the database
 
 ALTER TABLE tablename to add or remove columns from a table in the database
