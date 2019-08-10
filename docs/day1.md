@@ -49,7 +49,9 @@ REVOKE to revoke (remove) a privilege from a user
 
 #### Demo
 [Hello world demo!](https://github.com/ffliza/training/blob/master/Activity-1-1.ipynb)
+
 [Create a database]()
+
 [How to get help? Check the documentation on Create database.](https://dev.mysql.com/doc/refman/8.0/en/create-database.html)
 
 
