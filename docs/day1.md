@@ -12,12 +12,6 @@
 
 4. SQL Server Integration Services (SSIS): SSIS is a component of SQL Server that does the Extract, Transform, and Load (ETL) process that cleans up and formats raw data from source systems for inclusion in the database as ready-to-use information.
 
-[How to get help? Check the documentation on Create database.](https://dev.mysql.com/doc/refman/8.0/en/create-database.html)
-
-
-#### Demo
-[Hello world demo!](https://github.com/ffliza/training/blob/master/Activity-1-1.ipynb)
-[Create a database]
 
 ### SQL consists of three components:
 
@@ -51,6 +45,13 @@ This component of the SQL language is used to create privileges to allow users a
 GRANT to grant a privilege to a user
 
 REVOKE to revoke (remove) a privilege from a user
+
+
+#### Demo
+[Hello world demo!](https://github.com/ffliza/training/blob/master/Activity-1-1.ipynb)
+[Create a database]()
+[How to get help? Check the documentation on Create database.](https://dev.mysql.com/doc/refman/8.0/en/create-database.html)
+
 
 ## Session 2
 
