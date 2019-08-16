@@ -57,6 +57,32 @@ REVOKE to revoke (remove) a privilege from a user
 
 ## Session 2
 
+### Data Types: int
+
+```sql
+create table tb_test_int_type(
+    int_10 int(10),
+    int_10_with_zf int(10) zerofill,
+    unit int unsigned
+);
+```
+
+```sql
+insert into tb_test_int_type(int_10, int_10_with_zf, unit)
+values (123456, 123456,3147483647), (123456, 4294967291,3147483647);
+```
+
+```sql
+select * from tb_test_int_type; 
+
+# int_10, int_10_with_zf, unit
+'123456', '0000123456', '3147483647'
+'123456', '4294967291', '3147483647'
+```
+
+
+## Session 3
+
 ### Data Manipulation Language --- single table SELECT statements
 ```sql
 select * from Table_A;
