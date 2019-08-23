@@ -169,7 +169,7 @@ ON table1.common_field = table2.common_field;
 
 Now, let us join tables 1 and 2 using the LEFT JOIN as follows 
 
-``1sql 
+```1sql 
   SELECT  ID, NAME, DAYS_BOOKED, APPROVAL_DATE
    FROM STAFF
    LEFT JOIN HOLIDAYS
@@ -206,7 +206,7 @@ ON table1.common_field = table2.common_field;
 
 Now, let us join tables 1 and 2 using the RIGHT JOIN as follows 
 
-``1sql 
+```1sql 
   SELECT  ID, NAME, DAYS_BOOKED, APPROVAL_DATE, ADDRESS
    FROM STAFF
    RIGHT JOIN HOLIDAYS
