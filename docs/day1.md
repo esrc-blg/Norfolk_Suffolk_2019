@@ -193,9 +193,9 @@ Output:
 ```
 
 
-## LEFT JOIN
+## RIGHT JOIN
 
-The basic syntax of a LEFT JOIN is as follows.
+The basic syntax of a RIGHT JOIN is as follows.
 
 ```sql
 SELECT table1.column1, table2.column2...
