@@ -100,7 +100,7 @@ Table 1 − Staff Table is as follows.
 +----+----------+-----+-----------+----------+
 | ID | NAME     | AGE | ADDRESS   | SALARY   |
 +----+----------+-----+-----------+----------+
-|  1 | Joe      |  32 | Londn     |  2000.00 |
+|  1 | Joe      |  32 | London    |  2000.00 |
 |  2 | Mark     |  25 | Colchester|  1500.00 |
 |  3 | Daniel   |  23 | Chelsmford|  2000.00 |
 |  4 | Linda    |  25 | Cambridge |  6500.00 |
@@ -167,11 +167,60 @@ LEFT JOIN table2
 ON table1.common_field = table2.common_field;
 ```
 
-Now, let us join tables 1 and 2 using the INNER JOIN as follows 
+Now, let us join tables 1 and 2 using the LEFT JOIN as follows 
 
-``sql 
+``1sql 
   SELECT  ID, NAME, DAYS_BOOKED, APPROVAL_DATE
    FROM STAFF
    LEFT JOIN HOLIDAYS
    ON STAFF.ID = HOLIDAYS.STAFF_ID;
  ```
+Output: 
+ 
+```
++----+----------+---------------+---------------------+
+| ID | NAME     | DAYS_BOOKED   | APPROVAL_DATE       |
++----+----------+---------------+---------------------+
+|  1 | Joe      | 3             | 2009-11-20 00:00:00 |
+|  2 | Mark     | NULL          | NULL                |
+|  3 | Daniel   | 5             | 2009-10-08 00:00:00 |
+|  3 | Daniel   | 9             | 2009-10-12 00:00:00 |
+|  4 | Linda    | NULL          | NULL                |
+|  5 | Adam     | NULL          | NULL                |
+|  6 | Jasmine  | NULL          | NULL                |
+|  7 | Paul     | 12            | 2008-05-20 00:00:00 |
++----+----------+---------------+---------------------+
+```
+
+
+## LEFT JOIN
+
+The basic syntax of a LEFT JOIN is as follows.
+
+```sql
+SELECT table1.column1, table2.column2...
+FROM table1
+RIGHT JOIN table2
+ON table1.common_field = table2.common_field;
+```
+
+Now, let us join tables 1 and 2 using the RIGHT JOIN as follows 
+
+``1sql 
+  SELECT  ID, NAME, DAYS_BOOKED, APPROVAL_DATE, ADDRESS
+   FROM STAFF
+   RIGHT JOIN HOLIDAYS
+   ON STAFF.ID = HOLIDAYS.STAFF_ID;
+ ```
+Output: 
+
+```
++----+----------+---------------+---------------------+-------------+
+| ID | NAME     | DAYS_BOOKED   | APPROVAL_DATE       | ADDRESS     |
++----+----------+---------------+---------------------+-------------+
+|  3 | Daniel   |   5           | 2009-10-08 00:00:00 | Chelsmford  |
+|  3 | Daniel   |   9           | 2009-10-12 00:00:00 | Chelsmford  |
+|  1 | Joe      |   3           | 2009-11-20 00:00:00 | London      |
+|  7 | Paul     |   12          | 2008-05-20 00:00:00 | London      |
++----+----------+---------------+---------------------+-------------+
+```
