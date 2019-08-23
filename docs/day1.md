@@ -79,6 +79,8 @@ select * from tb_test_int_type;
 '123456', '0000123456', '3147483647'
 '123456', '4294967291', '3147483647'
 ```
+### Data Types: float
+
 
 
 ## Session 3
@@ -87,3 +89,89 @@ select * from tb_test_int_type;
 ```sql
 select * from Table_A;
 ```
+
+
+### Joins
+
+
+```
+Table 1 − Staff Table is as follows.
+
++----+----------+-----+-----------+----------+
+| ID | NAME     | AGE | ADDRESS   | SALARY   |
++----+----------+-----+-----------+----------+
+|  1 | Joe      |  32 | Londn     |  2000.00 |
+|  2 | Mark     |  25 | Colchester|  1500.00 |
+|  3 | Daniel   |  23 | Chelsmford|  2000.00 |
+|  4 | Linda    |  25 | Cambridge |  6500.00 |
+|  5 | Adam     |  27 | Liverpool |  3500.00 |
+|  6 | Jasmine  |  22 | Manchester|  5500.00 |
+|  7 | Paul     |  24 | London    |  7000.00 |
++----+----------+-----+-----------+----------+
+```
+
+```
+ Table 2 - HOLIDAYS is as follows.
++-----+---------------------+-------------+-------------+
+| OID | APPROVAL_DATE       | Staff_ID    | DAYS_BOOKED |
++-----+---------------------+-------------+-------------+
+| 102 | 2009-10-08 00:00:00 |           3 |   5         |
+| 100 | 2009-10-12 00:00:00 |           3 |   9         |
+| 101 | 2009-11-20 00:00:00 |           1 |   3         |
+| 103 | 2008-05-20 00:00:00 |           7 |   12        |
++-----+---------------------+-------------+-------------+
+
+```
+## INNER JOIN
+Basic Syntax: 
+
+```sql
+SELECT table1.column1, table2.column2...
+FROM table1
+INNER JOIN table2
+ON table1.common_field = table2.common_field;
+```
+
+Now, let us join these two tables using the INNER JOIN as follows 
+
+```sql
+
+   SELECT  ID, NAME, DAYS_BOOKED, APPROVAL_DATE
+   FROM STAFF
+   INNER JOIN HOLIDAYS
+   ON STAFF.ID = HOLIDAYS.STAFF_ID;
+
+```
+Output: 
+
+```
++----+----------+---------------+---------------------+
+| ID | NAME     | DAYS_BOOKED   | APPROVAL_DATE       |
++----+----------+---------------+---------------------+
+|  3 | Daniel   |   5           | 2009-10-08 00:00:00 |
+|  3 | Daniel   |   9           | 2009-10-12 00:00:00 |
+|  1 | Joe      |   3           | 2009-11-20 00:00:00 |
+|  7 | Paul     |   12          | 2008-05-20 00:00:00 |
++----+----------+---------------+---------------------+
+
+```
+
+## LEFT JOIN
+
+The basic syntax of a LEFT JOIN is as follows.
+
+```sql
+SELECT table1.column1, table2.column2...
+FROM table1
+LEFT JOIN table2
+ON table1.common_field = table2.common_field;
+```
+
+Now, let us join tables 1 and 2 using the INNER JOIN as follows 
+
+``sql 
+  SELECT  ID, NAME, DAYS_BOOKED, APPROVAL_DATE
+   FROM STAFF
+   LEFT JOIN HOLIDAYS
+   ON STAFF.ID = HOLIDAYS.STAFF_ID;
+ ```
