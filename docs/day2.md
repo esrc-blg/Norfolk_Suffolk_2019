@@ -1,7 +1,7 @@
 # The Application of SQL 
 
 
-## SELECT Statement: with Cout
+## Query 1: SELECT Statement: with Count
 
 ```sql
 SELECT 
@@ -25,7 +25,7 @@ Output:
 ```
 
 
-## GROUP BY and SUM()
+## Query 2: GROUP BY and SUM()
 
 ```sql
 SELECT 
@@ -66,7 +66,7 @@ Output:
 +-----------------------------------+--------------------------------+
 ```
 
-## ORDER BY and SUM()
+## Query 3: ORDER BY and SUM()
 
 ```sql
 SELECT 
@@ -108,9 +108,7 @@ Output:
 +-----------------------------------+--------------------------------+
 ```
 
-## ORDER BY and SUM()
-
-## Sub-queries
+##Query 4: Sub-queries
 
 ```sql
 SELECT DISTINCT
@@ -191,8 +189,12 @@ Output:
 | Strabane           |
 +---------------------
 ```
+##Query 5: VIEWS
 
-## VIEWS
+##Query 6: VIEWS
+
+
+##Query 7: VIEWS
 
 ```sql
 SELECT 
