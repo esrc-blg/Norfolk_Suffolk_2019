@@ -224,3 +224,54 @@ Output:
 |  7 | Paul     |   12          | 2008-05-20 00:00:00 | London      |
 +----+----------+---------------+---------------------+-------------+
 ```
+
+
+## Create Table
+
+Example
+
+### Create Prisoners Table
+```sql
+CREATE TABLE Prisoners(
+    PrisonersID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255) 
+);
+```
+### select Prisoners table 
+
+```sql
+SELECT * FROM Prisoners
+```
+Output: empty table
+
+```
++-------------+-----------+------------+---------+------+
+| PrisonersID | LastName  | FirstName  | Address | City |
++-------------+-----------+------------+---------+------+
+```
+
+### Insert data into Prisoners table 
+
+```sql
+
+INSERT INTO Prisoners (LastName, FirstName, Address, City) 
+VALUES ('Doe','John','21 X street','London');
+
+```
+### select Prisoners table 
+
+```sql
+SELECT * FROM Prisoners
+```
+Output:
+
+```
++-------------+-----------+------------+-------------+--------+
+| PrisonersID | LastName  | FirstName  | Address     | City   |
++-------------+-----------+------------+-------------+--------+
+| 1	          | Doe       | John       | 21 X street | London |
++-------------+-----------+------------+-------------+--------+
+```
