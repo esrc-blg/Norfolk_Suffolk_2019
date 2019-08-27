@@ -455,3 +455,36 @@ Output:
 +--------------------------------------------------------------------------------------+
 
 ```
+
+
+## Query 10: Using programming construct in the stored procedure
+
+```sql
+DELIMITER $$ 
+DROP PROCEDURE IF EXISTS test_mysql_while_loop$$ 
+CREATE PROCEDURE test_mysql_while_loop(IN count INT) BEGIN 
+DECLARE x  INT;                 # Declare a variable  
+SET x = 1;                      # Initialise the variable 
+WHILE x  <= count DO            # Repeat the same add operation	
+SET  x = x + 1;                 # Add operation 
+END WHILE;               
+
+SELECT x;                       # Print the final value in x    
+END$$
+DELIMITER ;
+```
+
+### Calling the procedure 
+
+```sql 
+CALL test_mysql_while_loop(5);
+```
+
+Output:
+```
++---+
+| x |
++---+
+| 6 |
++---+
+```
