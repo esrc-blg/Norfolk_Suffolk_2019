@@ -275,3 +275,65 @@ Ouptut:
 +-----------------+-----------
 | 60+	          | 4        |
 +-----------------+-----------
+``` 
+## Query 8: Retrieve all the crime categories from two tables given some conditions.
+
+# Combine query results with UNION
+
+```sql
+
+SELECT 
+    `Overall Crime Category`
+FROM
+    table_crimerecords 
+UNION SELECT 
+    `Crime_Type`
+FROM
+    table_monthly_crime_data
+WHERE
+    `Month` = 'May'
+        AND `Calendar_Year` = '2014'
+        OR `Calendar_Year` = '2015';
+
+```
+output: 
+
+```
+
+```
+
+# MYSQL does not support INTERSECT, so we can simulate the function using subquery.
+
+```sql
+SELECT DISTINCT
+    `Overall Crime Category`
+FROM
+    table_crimerecords
+WHERE
+    `Overall Crime Category` IN (SELECT 
+            `Crime_Type`
+        FROM
+            table_monthly_crime_data
+        WHERE
+            `Month` = 'May'
+                AND `Calendar_Year` = '2014'
+                OR `Calendar_Year` = '2015') ;
+```
+
+Output:
+
+```
++--------------------------------------+
+| Overall Crime Category               |
++--------------------------------------+
+| Sexual offences                      |
++--------------------------------------+
+| Robbery                              |
++--------------------------------------+
+| Criminal damage                      |
++--------------------------------------+
+| Public order offences                |
++--------------------------------------+
+| Miscellaneous crimes against society |
++--------------------------------------+
+```
