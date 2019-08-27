@@ -234,10 +234,10 @@ Example
 ```sql
 CREATE TABLE Prisoners(
     PrisonersID int,
-    LastName varchar(255),
-    FirstName varchar(255),
-    Address varchar(255),
-    City varchar(255) 
+    LastName text,
+    FirstName text,
+    Address text,
+    City text 
 );
 ```
 ### select Prisoners table 
