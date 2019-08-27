@@ -1,7 +1,7 @@
 # The Application of SQL 
 
 
-## Query 1: SELECT Statement: with Count
+## Query 1: Select the number of the distinct crime category of female victims in the age group 20-29 
 
 ```sql
 SELECT 
@@ -25,7 +25,7 @@ Output:
 ```
 
 
-## Query 2: GROUP BY and SUM()
+## Query 2: Total number of crime by policing district
 
 ```sql
 SELECT 
@@ -66,7 +66,7 @@ Output:
 +-----------------------------------+--------------------------------+
 ```
 
-## Query 3: ORDER BY and SUM()
+## Query 3: Total number of crime by policing district and show them in descending order.
 
 ```sql
 SELECT 
@@ -108,7 +108,7 @@ Output:
 +-----------------------------------+--------------------------------+
 ```
 
-##Query 4: Sub-queries
+## Query 4: Retrieve areas that are most vulnerable for young male children.
 
 ```sql
 SELECT DISTINCT
@@ -189,12 +189,61 @@ Output:
 | Strabane           |
 +---------------------
 ```
-##Query 5: VIEWS
+## Query 5: Create a view for 'Sexual offences’ crime category.
+```sql
+CREATE OR REPLACE VIEW victim_age_gender AS
+    SELECT 
+        `Incident ID`, `Victim age band`, `Victim Gender`
+    FROM
+        table_crimerecords
+    WHERE
+        `Overall Crime Category` LIKE 'Sexual offences'; 
 
-##Query 6: VIEWS
+```
+## Query 6: Retrieve the records from the view for female victims
+```sql
+SELECT * FROM victim_age_gender WHERE `Victim Gender`='FEMALE';
+``` 
 
+Output (only showing part of the output):
 
-##Query 7: VIEWS
+```
++--------------+-----------------+---------------+
+| Incident ID  | Victim age band | Victim Gender |
++--------------+-----------------+---------------+
+| 30           | 0-9             | FEMALE        |
++--------------+-----------------+---------------+
+| 73           | 30-39	         | FEMALE        |
++--------------+-----------------+---------------+
+| 88           | 0-9	         | FEMALE        |
++--------------+-----------------+---------------+
+| 114          | 10-19	         | FEMALE        |
++--------------+-----------------+---------------+
+| 129          | 30-39	         | FEMALE        |
++--------------+-----------------+---------------+
+| 236          | 10-19	         | FEMALE        |
++--------------+-----------------+---------------+
+| 325          | 0-9	         | FEMALE        |
++--------------+-----------------+---------------+
+| 335          | 40-49	         | FEMALE        |
++--------------+-----------------+---------------+
+| 793          | 10-19	         | FEMALE        |
++--------------+-----------------+---------------+
+| 27780        | 20-29	         | FEMALE        |
++--------------+-----------------+---------------+
+| 27843        | 10-19	         | FEMALE        |
++--------------+-----------------+---------------+
+| 27954        | 20-29	         | FEMALE        |
++--------------+-----------------+---------------+
+| 27983        | 10-19	         | FEMALE        |
++--------------+-----------------+---------------+
+| 28209        | 20-29	         | FEMALE        |
++--------------+-----------------+---------------+
+| 28251        | 10-19	         | FEMALE        |
++--------------+-----------------+---------------+
+```
+
+## Query 7: Which female age group is most vulnerable in sexual offences? 
 
 ```sql
 SELECT 
