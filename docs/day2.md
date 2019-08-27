@@ -107,3 +107,87 @@ Output:
 | Fermanagh & Omagh                 | 391802                         |
 +-----------------------------------+--------------------------------+
 ```
+
+## ORDER BY and SUM()
+
+## Sub-queries
+
+```sql
+SELECT DISTINCT
+    `Area`
+FROM
+    table_incidents
+WHERE
+    `Incident ID` IN (SELECT 
+            `Incident ID`
+        FROM
+            table_crimerecords
+        WHERE
+            `Victim age band` = '0-9'
+                AND `Victim Gender` = 'MALE')
+```
+
+Output:
+```
++---------------------
+| Area               |
++---------------------
+| Omagh              |            
++---------------------
+| North Down         |               
++---------------------
+| Lisburn            |               
++---------------------
+| Down               |
++---------------------
+| Antrim             |
++---------------------
+| East Belfast       |
++---------------------
+| Newtownabbey       |
++---------------------
+| Moyle              |
++---------------------
+| Castlereagh        |
++---------------------
+| North Belfast      |
++---------------------
+| Carrickfergus      |
++---------------------
+| West Belfast       |
++---------------------
+| Dungannon&S Tyrone |
++---------------------
+| South Belfast      |
++---------------------
+| Foyle              |
++---------------------
+| Craigavon          |
++---------------------
+| Ballymena          |
++---------------------
+| Armagh             |
++---------------------
+| Coleraine          |
++---------------------
+| Fermanagh          |
++---------------------
+| Ards               |
++---------------------
+| Larne              |
++---------------------
+| Newry & Mourne     |
++---------------------
+| Limavady           |
++---------------------
+| Ballymoney         |
++---------------------
+| Cookstown          |
++---------------------
+| Magherafel         |
++---------------------
+| Banbridge          |
++---------------------
+| Strabane           |
++---------------------
+```
