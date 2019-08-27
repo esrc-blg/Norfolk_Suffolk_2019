@@ -401,7 +401,7 @@ END //
 DELIMITER ;
 
 ```
-### calling store procedure 
+### Calling the stored procedure 
 
 ```sql
 CALL SelectMonthyCrime ('Northern Ireland', 'Apr');
@@ -474,7 +474,7 @@ END$$
 DELIMITER ;
 ```
 
-### Calling the procedure 
+### Calling the stored procedure 
 
 ```sql 
 CALL test_mysql_while_loop(5);
