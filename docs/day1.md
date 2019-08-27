@@ -275,3 +275,34 @@ Output:
 | 1           | Doe       | John       | 21 X street | London |
 +-------------+-----------+------------+-------------+--------+
 ```
+
+### Add a new column (Age) to table Prisoners
+
+```sql
+ALTER TABLE Prisoners ADD Age int;
+```
+
+### Insert data into Prisoners table 
+
+```sql
+
+INSERT INTO Prisoners (LastName, FirstName, Address, City, Age) 
+VALUES ('Doe','Jimmy','21 X street','London', 40);
+
+```
+### select Prisoners table 
+
+```sql
+SELECT * FROM Prisoners
+```
+Output:
+
+```
++-------------+-----------+------------+-------------+--------+------+
+| PrisonersID | LastName  | FirstName  | Address     | City   | Age  |
++-------------+-----------+------------+-------------+--------+------+
+| 1           | Doe       | John       | 21 X street | London | NULL |
++-------------+-----------+------------+-------------+--------+------+
+| 1           | Doe       | Jimmy      | 21 X street | London | 40   |
++-------------+-----------+------------+-------------+--------+------+
+```
