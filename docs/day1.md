@@ -308,3 +308,24 @@ Output:
 ```
 
 
+### Drop column Age from table Prisoners
+
+```sql 
+ALTER TABLE Prisoners DROP COLUMN Age;
+```
+### select Prisoners table 
+
+```sql
+SELECT * FROM Prisoners
+```
+Output:
+
+```
++-------------+-----------+------------+-------------+--------+
+| PrisonersID | LastName  | FirstName  | Address     | City   |
++-------------+-----------+------------+-------------+--------+
+| 1           | Doe       | John       | 21 X street | London |
++-------------+-----------+------------+-------------+--------+
+| 2           | Doe       | Jimmy      | 21 X street | London |
++-------------+-----------+------------+-------------+--------+
+```
