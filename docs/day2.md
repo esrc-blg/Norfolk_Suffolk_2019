@@ -38,7 +38,7 @@ GROUP BY `Policing_District`;
 Output: 
 ```
 +-----------------------------------+--------------------------------+
-| Policing_District                 | SUM(CAST(`Count` AS UNSIGNED)) |
+| Policing_District                 |  __SUM(CAST(`Count` AS UNSIGNED))__ |
 +-----------------------------------+--------------------------------+
 | Northern Irelan                   | 5155262                        |
 +-----------------------------------+--------------------------------+
